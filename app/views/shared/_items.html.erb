@@ -1,0 +1,10 @@
+<%= link_to 'Add', new_product_path, class: "my-4 text-teal-500 font-bold text-lg", data: { turbo_frame: "modal"} if Current.user %>
+<%= link_to 'Favoritos', favorites_path, class: "my-4 text-teal-500 font-bold text-lg" if Current.user %>
+<%= link_to 'Categories', categories_path, class: "my-4 text-teal-500 font-bold text-lg" if Current.user&.admin? %>
+<%= link_to 'Login', new_session_path, class: "my-4 text-teal-500 font-bold text-lg" unless Current.user%>
+<%= link_to 'Register', new_user_path, class: "my-4 text-teal-500 font-bold text-lg" unless Current.user%>
+<%= link_to 'Logout', session_path(Current.user.id), class: "my-4 text-teal-500 font-bold text-lg", data: {
+    turbo_method: :delete,
+    turbo_confirm: t('common.confirm')
+    } if Current.user
+%>

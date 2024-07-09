@@ -1,0 +1,89 @@
+es:
+  activerecord:
+    models:
+      product: Producto
+    attributes:
+      product:
+        title: 'Titulo'
+        description: 'Descripción'
+        price: 'Precio'
+        photo: 'Foto'
+    errors:
+      models:
+        user:
+          attributes:
+            username:
+              too_long: "es demasiado largo (máximo %{count} caracteres)"
+              invalid: "no es válido"
+              too_short: "es demasiado corto (mínimo %{count} caracteres)"
+              blank: "ingresar contraseña"
+              taken: "ya está en uso"
+            password:
+              blank: "ingresar contraseña"
+              too_short: "es demasiado corto (mínimo %{count} caracteres)"
+            email:
+              blank: "ingresar correo electrónico"
+              taken: "ya está en uso"
+        product:
+          attributes:
+            title:
+              blank: 'No puede estar vacío'
+            description:
+              blank: 'No puede estar vacío'
+            price:
+              blank: 'No puede estar vacío'
+  common:
+    confirm: 'Estas seguro?'
+    choose_file: 'Eligir Archivo'
+    not_logged_in: 'Necesitas iniciar sesión o registrarte'
+  authentication:
+    users:
+      create:
+        created: 'Tu cuenta ha sido creada'
+    sessions:
+      create:
+        created: 'Tu cuenta ha autenticada'
+        failed: 'Ingreso invalido'
+  products:
+    edit:
+      title: 'Editar producto'
+    new:
+      title: 'Agregar producto'
+    index:
+      title: 'Productos'
+      All: 'Todos'
+      min_price: 'Precio mínimo'
+      max_price: 'precio máximo'
+      queryText: 'Consulta'
+      expensive: 'Más caros'
+      cheapest: 'Más baratos'
+      newest: 'Recientes'
+    show:
+      edit: 'Editar producto'
+      delete: 'Eliminar producto'
+    create:
+      created: 'Tu producto se ha creado correctamente'
+    update:
+      updated: 'Tu producto se ha actualizado correctamente'
+    destroy:
+      destroyed: 'Tu producto se ha eliminado correctamente'
+  categories:
+    edit:
+      title: 'Editar categoria'
+    new:
+      title: 'Agregar categoria'
+    index:
+      title: 'Categorias'
+    category:
+      edit: 'Editar categoria'
+      delete: 'Eliminar categoria'
+    create:
+      created: 'Tu categoria se ha creado correctamente'
+    update:
+      updated: 'Tu categoria se ha actualizado correctamente'
+    destroy:
+      destroyed: 'Tu categoria se ha eliminado correctamente'
+  user_mailer:
+    Welcome:
+      subject: 'Bienvenido a Vendelo'
+      welcome_message:  'Hey %{username}, bienvenido a Vendelo. Esperamos muchas ventas!'

@@ -1,0 +1,10 @@
+<%= link_to product_path(product), class:'product bg-white mb-2 rounded-lg mx-1 sm:w-[calc(33.33333%_-_1rem)] lg:w-[calc(25%_-_1rem)]', 'data-turbo-frame': '_top' do%>
+    <div>
+        <div class="w-full h-[calc(80%)] object-cover"><%= image_tag product.photo.attached? ? product.photo : 'placeholder.jpg', class: "mx-auto mt-1"%></div>
+        <div class= "m-2 mt-3">
+            <h2><%= product.title %></h2>
+            <span class="font-bold text-xl">$<%= product.price %>.00</span>
+            <p class="text-gray-500 text-sm mt-2"><%= product.description %></p>
+        </div>
+    </div>
+<% end %>
